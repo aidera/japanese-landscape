@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "0c786648bbfea18d5328904c1c0dfcc5",
+    "revision": "b549eca1b407cea64dd0dfc4d92d7e1b",
     "url": "/japanese-landscape/index.html"
   },
   {
-    "revision": "e214ae5a0bf93d41d36e",
-    "url": "/japanese-landscape/static/css/main.6673dee2.chunk.css"
+    "revision": "ae7dcdbb6e3c8e35658f",
+    "url": "/japanese-landscape/static/css/main.0540c616.chunk.css"
   },
   {
     "revision": "1eb005eb85a181c873e0",
@@ -16,7 +16,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/japanese-landscape/static/js/2.b7e35764.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "e214ae5a0bf93d41d36e",
+    "revision": "ae7dcdbb6e3c8e35658f",
     "url": "/japanese-landscape/static/js/main.db761774.chunk.js"
   },
   {
@@ -24,7 +24,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/japanese-landscape/static/js/runtime-main.7bc63573.js"
   },
   {
-    "revision": "ec0ba0ac0e816c6de0ba1167e634e8ce",
-    "url": "/japanese-landscape/static/media/art-overlay.ec0ba0ac.png"
+    "revision": "689d92f9473963ebf97cba8bd7e6b617",
+    "url": "/japanese-landscape/static/media/art-overlay.689d92f9.png"
   }
 ]);
