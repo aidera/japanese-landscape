@@ -1,0 +1,281 @@
+@import "./reset";
+@import "./theme";
+
+
+.App {
+  background: $color_1_l;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  transition: background 1s ease-in-out;
+}
+
+.svg {
+  position: absolute;
+  min-width: 100vw;
+  min-height: 100vh;
+  height: calc(100vw * 0.5625);
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+
+
+
+
+
+#Layer1 {
+  fill: $color_2_l;
+  transition: fill 2s ease-in-out;
+}
+
+
+
+
+
+
+
+
+#Layer2 {
+  fill: $color_3_l;
+  transition: fill 2.5s ease-in-out;
+}
+
+
+
+
+
+
+
+#Sky {
+  fill: $color_3_l;
+  transition: fill 2s ease-in-out;
+}
+
+#sun {
+  fill: $color_4_l;
+  transition: fill 1s ease-in-out;
+}
+.sun-rise {
+  animation-iteration-count: 1;
+  animation-name: sun-animation;
+  animation-timing-function: ease-in-out;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+@keyframes sun-animation {
+  from {
+    transform: translateY(0%);
+  }
+  50% {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+
+
+.cloud {
+  animation-iteration-count: infinite;
+  animation-name: cloud-animation;
+  animation-timing-function: linear;
+}
+#cloud1 {
+  animation-duration: 55s;
+  animation-delay: -10s;
+}
+#cloud2 {
+  animation-duration: 45s;
+  animation-delay: -10s;
+}
+#cloud3 {
+  animation-duration: 65s;
+  animation-delay: -30s;
+}
+#cloud4 {
+  animation-duration: 55s;
+  animation-delay: -35s;
+}
+#cloud5 {
+  animation-duration: 45s;
+  animation-delay: -35s;
+}
+#cloud6 {
+  animation-duration: 65s;
+  animation-delay: 0s;
+}
+@keyframes cloud-animation {
+  from {
+    transform: translateX(0);
+
+  }
+  to {
+    transform: translateX(150%);
+
+  }
+}
+
+
+
+
+
+
+
+
+#Layer3 {
+  fill: $color_4_l;
+  transition: fill 1s ease-in-out;
+  transform-origin: 50% 100%;
+}
+
+#lake {
+  fill: $color_2_l;
+  transition: fill 1s ease-in-out;
+}
+
+#tree1, #tree2 {
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  animation-direction: alternate;
+  transform-origin: 50% 100%;
+}
+#tree1 {
+  transform: translate(30%, 37%);
+  animation-name: tree1-animation;
+  animation-duration: 10s;
+  transform-origin: 50% 100%;
+}
+#tree2 {
+  transform: translate(70%, 19%);
+  transform-origin: 50% 100%;
+  animation-duration: 7s;
+  animation-name: tree2-animation;
+}
+@keyframes tree1-animation {
+  from {
+    transform: rotate(0) translate(30%, 37%);
+  }
+  to {
+    transform: rotate(5deg) translate(30%, 37%);
+  }
+}
+@keyframes tree2-animation {
+  from {
+    transform: rotate(0) translate(75%, 19%);
+  }
+  to {
+    transform: rotate(-1deg) translate(75%, 19%);
+  }
+}
+
+
+
+#art-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('./art-overlay.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.1;
+  transition: all 2s ease-in-out;
+}
+
+
+
+
+.interaction {
+  position: fixed;
+  top: 10%;
+  right: 10%;
+  cursor: pointer;
+  z-index: 1000;
+  .text {
+    font-family: "Marck Script", cursive;
+    font-size: 30px;
+    line-height: 1.5;
+    text-shadow: -2px 0 $color_4_l, 0 2px $color_4_l, 2px 0 $color_4_l, 0 -2px $color_4_l;
+    color: $color_1_l;
+    transition: 2s;
+  }
+  button {
+    transition: 2s;
+    font-family: "Marck Script", cursive;
+    font-size: 30px;
+    line-height: 1.5;
+    text-shadow: -2px 0 $color_4_l, 0 2px $color_4_l, 2px 0 $color_4_l, 0 -2px $color_4_l;
+    color: $color_1_l;
+    border: 2px solid $color_1_l;
+    padding: 5px 15px;
+    box-shadow: -2px 0 $color_4_l, 0 2px $color_4_l, 2px 0 $color_4_l, 0 -2px $color_4_l;
+    margin-top: 20px;
+  }
+  @media(max-width: 400px) {
+    right: 0;
+    padding: 0 5%;
+    width: 100%;
+    .text {
+      font-size: 20px;
+    }
+    button {
+      font-size: 20px;
+    }
+  }
+}
+
+
+
+
+
+.App.dark {
+  background-color: $color_1_d;
+  #Layer1 {
+    fill: $color_2_d;
+  }
+  #Layer2 {
+    fill: $color_3_d;
+  }
+  #Sky {
+    fill: $color_3_d;
+  }
+  #sun {
+    fill: $color_5_d;
+
+  }
+  #Layer3 {
+    fill: $color_4_d;
+  }
+  #lake {
+    fill: $color_1_d;
+  }
+  #art-overlay {
+    filter: invert(100%);
+  }
+  .interaction {
+    .text {
+      font-family: "Marck Script", cursive;
+
+      line-height: 1.5;
+      text-shadow: -2px 0 $color_4_d, 0 2px $color_4_d, 2px 0 $color_4_d, 0 -2px $color_4_d;
+      color: $color_5_d;
+    }
+    button {
+      text-shadow: -2px 0 $color_4_d, 0 2px $color_4_d, 2px 0 $color_4_d, 0 -2px $color_4_d;
+      color: $color_5_d;
+      box-shadow: -2px 0 $color_4_d, 0 2px $color_4_d, 2px 0 $color_4_d, 0 -2px $color_4_d;
+      border: 2px solid $color_5_d;
+    }
+  }
+}
+
+
+
